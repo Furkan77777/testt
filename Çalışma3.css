@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.kapsayıcı{
+    background: url(/Resimler/dag\(24\).jpg);
+    height: 195vh;
+    width: 100%;
+    background-size: 100% 100%;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(red, green, blue, alpha);
+}
+.logo{
+    line-height: 100px;
+    font-weight: bold;
+    font-family:sans-serif;
+    margin-left: 15px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
+.logo:hover{
+    transition: 0.7s;
+    color: aqua;
+    box-shadow: 5px 1px 1px;
+}
+#kutu{
+    display: none;
+}
+.enable{
+    font-size: 24px;
+    float: right;
+    line-height: 100px;
+    margin-right: 15px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+.disable{
+    font-size: 24px;
+    float: right;
+    line-height: 100px;
+    margin-right: 15px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+.list{
+    float: right;
+    line-height: 100px;
+    margin-right: 15px;
+}
+.list a{
+    text-decoration: none;
+    padding: 0 20px;
+    color: white;
+}
+.list a:hover{
+    transition: 0.7s;
+    color: aqua;
+    box-shadow: 5px 1px 1px;
+}
+.resim{
+    padding: 0 20px;
+    text-align: center;
+}
+.resim img{
+    height: 500px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px;
+    margin-left: -5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.resim img:hover{
+    box-shadow: 30px 40px 50px;
+    transform: scale(0.6);
+    transition: 0.7s;
+}
+.başlık{
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+}
+.paragraf{
+    color:white;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: cursive;
+    text-align: center;
+}
+.paragraf .ilk{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.paragraf .ikinci{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* MOBİL GÖRÜNÜMÜ */
+@media screen and (max-width:700px){                       
+    .kapsayıcı{
+        height: 220vh;
+    }
+    .list{
+        display: none;
+    }
+    .enable{
+        display: block;
+    }
+    .resim{
+        text-align: center;
+    }
+    .resim img{
+        max-width: 600px;
+        transition: 0.7s;
+        margin-left: 0px;
+    }
+    #kutu:checked ~ .list{
+        display: block;
+        position: fixed;
+        background-color:black;
+        width: 100%;
+        height: 100vh;
+        transition: 1.7s;
+        top: 0px;
+        
+    }
+    .list a{
+        color: white;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        
+    }
+    #kutu:checked ~ .enable{
+    display: none;
+}
+#kutu:checked ~ .disable{
+    display: block;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+}
+}
+
+
+
+
+
+
